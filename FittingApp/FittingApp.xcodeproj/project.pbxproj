@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -66,11 +66,27 @@
 			isa = PBXGroup;
 			children = (
 				FA23FE2C25EEB90200FCDFB3 /* AppDelegate.swift */,
+				FA23FE4125EEE59600FCDFB3 /* Screens */,
 				FA23FE3525EEB90500FCDFB3 /* Assets.xcassets */,
 				FA23FE3725EEB90500FCDFB3 /* LaunchScreen.storyboard */,
 				FA23FE3A25EEB90500FCDFB3 /* Info.plist */,
 			);
 			path = FittingApp;
+			sourceTree = "<group>";
+		};
+		FA23FE4025EEE58900FCDFB3 /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logout;
+			sourceTree = "<group>";
+		};
+		FA23FE4125EEE59600FCDFB3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE4025EEE58900FCDFB3 /* Logout */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		FD46307F414BE62E1B9C9AE0 /* Pods */ = {
@@ -79,7 +95,6 @@
 				D75A76190493ABD47C5D8D3D /* Pods-FittingApp.debug.xcconfig */,
 				E7A0D88DD8259E371D96A444 /* Pods-FittingApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
