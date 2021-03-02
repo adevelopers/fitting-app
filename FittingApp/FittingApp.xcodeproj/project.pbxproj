@@ -11,6 +11,14 @@
 		FA23FE2D25EEB90200FCDFB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE2C25EEB90200FCDFB3 /* AppDelegate.swift */; };
 		FA23FE3625EEB90500FCDFB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA23FE3525EEB90500FCDFB3 /* Assets.xcassets */; };
 		FA23FE3925EEB90500FCDFB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA23FE3725EEB90500FCDFB3 /* LaunchScreen.storyboard */; };
+		FA23FE4325EEE60400FCDFB3 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE4225EEE60400FCDFB3 /* LoggedOutViewController.swift */; };
+		FA23FE4825EEE70500FCDFB3 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE4625EEE70500FCDFB3 /* Images.swift */; };
+		FA23FE4925EEE70500FCDFB3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE4725EEE70500FCDFB3 /* Fonts.swift */; };
+		FA23FE5325EEE98F00FCDFB3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE5225EEE98F00FCDFB3 /* Coordinator.swift */; };
+		FA23FE5525EEE9FD00FCDFB3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE5425EEE9FD00FCDFB3 /* AppCoordinator.swift */; };
+		FA23FE5825EEEF1E00FCDFB3 /* LoggedOutAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE5725EEEF1E00FCDFB3 /* LoggedOutAssembly.swift */; };
+		FA23FE5A25EEEFB400FCDFB3 /* LoggedOutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE5925EEEFB400FCDFB3 /* LoggedOutCoordinator.swift */; };
+		FA23FE5C25EEFFB100FCDFB3 /* LoggedOutViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE5B25EEFFB100FCDFB3 /* LoggedOutViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +29,18 @@
 		FA23FE3525EEB90500FCDFB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA23FE3825EEB90500FCDFB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA23FE3A25EEB90500FCDFB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA23FE4225EEE60400FCDFB3 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
+		FA23FE4625EEE70500FCDFB3 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		FA23FE4725EEE70500FCDFB3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		FA23FE4A25EEE86000FCDFB3 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		FA23FE4B25EEE86100FCDFB3 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
+		FA23FE4C25EEE86100FCDFB3 /* Questrial-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Questrial-Regular.otf"; sourceTree = "<group>"; };
+		FA23FE4D25EEE86100FCDFB3 /* ofont.ru_Corbel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ofont.ru_Corbel.ttf; sourceTree = "<group>"; };
+		FA23FE5225EEE98F00FCDFB3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FA23FE5425EEE9FD00FCDFB3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FA23FE5725EEEF1E00FCDFB3 /* LoggedOutAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutAssembly.swift; sourceTree = "<group>"; };
+		FA23FE5925EEEFB400FCDFB3 /* LoggedOutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutCoordinator.swift; sourceTree = "<group>"; };
+		FA23FE5B25EEFFB100FCDFB3 /* LoggedOutViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewProtocol.swift; sourceTree = "<group>"; };
 		FCDC8DDDE7E8D88728760B15 /* Pods_FittingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FittingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,7 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				FA23FE2C25EEB90200FCDFB3 /* AppDelegate.swift */,
+				FA23FE4425EEE67600FCDFB3 /* Common */,
 				FA23FE4125EEE59600FCDFB3 /* Screens */,
+				FA23FE4525EEE69000FCDFB3 /* Resources */,
 				FA23FE3525EEB90500FCDFB3 /* Assets.xcassets */,
 				FA23FE3725EEB90500FCDFB3 /* LaunchScreen.storyboard */,
 				FA23FE3A25EEB90500FCDFB3 /* Info.plist */,
@@ -77,6 +99,11 @@
 		FA23FE4025EEE58900FCDFB3 /* Logout */ = {
 			isa = PBXGroup;
 			children = (
+				FA23FE5625EEEEE300FCDFB3 /* Assembly */,
+				FA23FE5125EEE94300FCDFB3 /* Model */,
+				FA23FE5025EEE92E00FCDFB3 /* Coordinator */,
+				FA23FE4F25EEE91E00FCDFB3 /* ViewModel */,
+				FA23FE4E25EEE90F00FCDFB3 /* Views */,
 			);
 			path = Logout;
 			sourceTree = "<group>";
@@ -87,6 +114,67 @@
 				FA23FE4025EEE58900FCDFB3 /* Logout */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		FA23FE4425EEE67600FCDFB3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE4725EEE70500FCDFB3 /* Fonts.swift */,
+				FA23FE4625EEE70500FCDFB3 /* Images.swift */,
+				FA23FE5225EEE98F00FCDFB3 /* Coordinator.swift */,
+				FA23FE5425EEE9FD00FCDFB3 /* AppCoordinator.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FA23FE4525EEE69000FCDFB3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE4B25EEE86100FCDFB3 /* Comfortaa-Regular.ttf */,
+				FA23FE4D25EEE86100FCDFB3 /* ofont.ru_Corbel.ttf */,
+				FA23FE4C25EEE86100FCDFB3 /* Questrial-Regular.otf */,
+				FA23FE4A25EEE86000FCDFB3 /* Roboto-Regular.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA23FE4E25EEE90F00FCDFB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE5B25EEFFB100FCDFB3 /* LoggedOutViewProtocol.swift */,
+				FA23FE4225EEE60400FCDFB3 /* LoggedOutViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA23FE4F25EEE91E00FCDFB3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA23FE5025EEE92E00FCDFB3 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE5925EEEFB400FCDFB3 /* LoggedOutCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FA23FE5125EEE94300FCDFB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA23FE5625EEEEE300FCDFB3 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE5725EEEF1E00FCDFB3 /* LoggedOutAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		FD46307F414BE62E1B9C9AE0 /* Pods */ = {
@@ -211,7 +299,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA23FE5825EEEF1E00FCDFB3 /* LoggedOutAssembly.swift in Sources */,
+				FA23FE5525EEE9FD00FCDFB3 /* AppCoordinator.swift in Sources */,
+				FA23FE4925EEE70500FCDFB3 /* Fonts.swift in Sources */,
+				FA23FE5A25EEEFB400FCDFB3 /* LoggedOutCoordinator.swift in Sources */,
+				FA23FE5C25EEFFB100FCDFB3 /* LoggedOutViewProtocol.swift in Sources */,
 				FA23FE2D25EEB90200FCDFB3 /* AppDelegate.swift in Sources */,
+				FA23FE5325EEE98F00FCDFB3 /* Coordinator.swift in Sources */,
+				FA23FE4825EEE70500FCDFB3 /* Images.swift in Sources */,
+				FA23FE4325EEE60400FCDFB3 /* LoggedOutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
