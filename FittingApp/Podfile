@@ -1,0 +1,12 @@
+platform :ios, '13.0'
+
+target 'FittingApp' do
+  use_frameworks!
+
+  # Pods for FittingApp
+  pod 'SnapKit'
+  pod 'Swinject'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+
+end
