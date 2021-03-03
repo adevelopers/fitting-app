@@ -160,6 +160,12 @@ class DiscoverViewController: UIViewController, DiscoverViewProtocol {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.navigationBar.barTintColor = .white
+    }
+    
     @objc
     private func didTapBookmark() {
         bookmarkButton.setImage(.bookmarkMakedImg, for: .normal)
