@@ -25,12 +25,16 @@ class LoginCoordinator: NavigationCoordinator {
     
     func start() {
         let controller = container.resolve(LoginViewProtocol.self)!
+        let viewModel = LoginViewModel()
+        viewModel.coordinator = self
+        controller.viewModel = viewModel
+        
         navigationController.pushViewController(controller, animated: true)
     }
 }
 
 extension LoginCoordinator: LoginFlow {
     func openDiscover() {
-        
+        DiscoverCoordinator(navigationController: navigationController, container: container).start()
     }
 }

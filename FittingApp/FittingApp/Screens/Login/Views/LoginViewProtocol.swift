@@ -9,5 +9,5 @@ import UIKit
 
 
 protocol LoginViewProtocol where Self: UIViewController {
-    
+    var viewModel: LoginViewModelInput? { get set }
 }
