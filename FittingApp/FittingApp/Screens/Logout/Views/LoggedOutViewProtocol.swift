@@ -8,5 +8,5 @@
 import UIKit
 
 protocol LoggedOutViewProtocol where Self: UIViewController {
-    
+    var viewModel: LoggedOutViewModelInput? { get set }
 }

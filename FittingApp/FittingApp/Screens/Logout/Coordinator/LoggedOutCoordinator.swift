@@ -9,6 +9,11 @@ import UIKit
 import Swinject
 
 
+protocol LoggedOutFlow {
+    func login()
+    func registration()
+}
+
 class LoggedOutCoordinator: NavigationCoordinator {
     
     var navigationController: UINavigationController
@@ -20,9 +25,21 @@ class LoggedOutCoordinator: NavigationCoordinator {
     }
     
     func start() {
-        let controller = container.resolve(LoggedOutView.self)!
+        let controller = container.resolve(LoggedOutViewProtocol.self)!
+        let viewModel = LoggedOutViewModel()
+        viewModel.coordinator = self
+        controller.viewModel = viewModel
         navigationController.viewControllers = [controller]
     }
     
+}
+
+extension LoggedOutCoordinator: LoggedOutFlow {
+    func login() {
+        LoginCoordinator(navigationController: navigationController, container: container).start()
+    }
     
+    func registration() {
+        
+    }
 }

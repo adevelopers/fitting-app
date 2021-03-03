@@ -19,13 +19,23 @@ class AppCoordinator: NavigationCoordinator {
     init(window: UIWindow?, container: Container) {
         self.window = window
         self.container = container
-        self.navigationController = UINavigationController()
+        self.navigationController = NavigationController()
+        setupNavigationBar()
     }
     
     func start() {
         window?.rootViewController = navigationController
         LoggedOutCoordinator(navigationController: navigationController, container: container).start()
         window?.makeKeyAndVisible()
+    }
+    
+    private func setupNavigationBar() {
+        // back button icon
+        navigationController.navigationBar.backIndicatorImage = .arrowBackImg
+        navigationController.navigationBar.backIndicatorTransitionMaskImage = .arrowBackImg
+        navigationController.navigationBar.tintColor = .black
+        navigationController.navigationBar.barTintColor = .white
+        
     }
     
 }

@@ -13,6 +13,8 @@ import SnapKit
 
 class LoggedOutViewController: UIViewController, LoggedOutViewProtocol {
     
+   var viewModel: LoggedOutViewModelInput?
+    
    private lazy var logoTitleView: UIButton = {
         let view = UIButton()
         view.backgroundColor = .clear
@@ -65,8 +67,7 @@ class LoggedOutViewController: UIViewController, LoggedOutViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        view.backgroundColor = .black
         
         view.addSubview(logoTitleView)
         view.addSubview(buttonsCardView)
@@ -102,15 +103,25 @@ class LoggedOutViewController: UIViewController, LoggedOutViewProtocol {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.navigationBar.barTintColor = .black
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    
     @objc
     private func didTapLogInButton() {
-//        let controller = LoginViewController()
-        print("Кнопка - переход на Логин")
+        viewModel?.didTapLoginButton()
     }
     
     @objc
     private func didTapRegisterButton() {
-//        let controller = RegisterViewController()
-        print("Кнопка - переход на Регистрацию")
+        viewModel?.didTapRegButton()
     }
 }

@@ -37,7 +37,8 @@ struct ModulesAssembly: Assembly {
     
     func assemble(container: Container) {
         let modules: [Assembly] = [
-                LoggedOutAssembly()
+            LoggedOutAssembly(),
+            LoginAssembly()
         ]
         modules.forEach {
             $0.assemble(container: container)
