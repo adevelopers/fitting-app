@@ -195,5 +195,10 @@ class DiscoverViewController: UIViewController, DiscoverViewProtocol {
     @objc
     private func didTapAddShoesButton() {
         print("Кнопка - Добавить обувь")
+        
+        
+        
     }
+    
+
 }
