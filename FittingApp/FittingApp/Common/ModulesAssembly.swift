@@ -15,7 +15,8 @@ struct ModulesAssembly: Assembly {
             LoggedOutAssembly(),
             LoginAssembly(),
             DiscoverAssembly(),
-            MainAssembly()
+            MainAssembly(),
+            SearchAssembly()
         ]
         modules.forEach {
             $0.assemble(container: container)

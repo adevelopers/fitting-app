@@ -34,6 +34,14 @@
 		FA23FE8125EFE96300FCDFB3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE8025EFE96300FCDFB3 /* MainCoordinator.swift */; };
 		FA23FE8325EFEA7A00FCDFB3 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE8225EFEA7A00FCDFB3 /* MainAssembly.swift */; };
 		FA23FE8525EFEC2100FCDFB3 /* ModulesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE8425EFEC2100FCDFB3 /* ModulesAssembly.swift */; };
+		FA23FE8825F1362C00FCDFB3 /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE8725F1362C00FCDFB3 /* SearchAssembly.swift */; };
+		FA23FE8A25F1364000FCDFB3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE8925F1364000FCDFB3 /* SearchViewController.swift */; };
+		FA23FE8E25F1369300FCDFB3 /* SearchViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE8D25F1369300FCDFB3 /* SearchViewProtocol.swift */; };
+		FA23FE9125F1375700FCDFB3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE9025F1375700FCDFB3 /* SearchViewModel.swift */; };
+		FA23FE9425F1381600FCDFB3 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE9325F1381600FCDFB3 /* SearchCoordinator.swift */; };
+		FA23FE9625F147CA00FCDFB3 /* Category.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA23FE9525F147CA00FCDFB3 /* Category.xcassets */; };
+		FA23FE9825F16D4D00FCDFB3 /* Brands.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA23FE9725F16D4D00FCDFB3 /* Brands.xcassets */; };
+		FA23FE9A25F19C4400FCDFB3 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE9925F19C4400FCDFB3 /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +79,14 @@
 		FA23FE8025EFE96300FCDFB3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		FA23FE8225EFEA7A00FCDFB3 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		FA23FE8425EFEC2100FCDFB3 /* ModulesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesAssembly.swift; sourceTree = "<group>"; };
+		FA23FE8725F1362C00FCDFB3 /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
+		FA23FE8925F1364000FCDFB3 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FA23FE8D25F1369300FCDFB3 /* SearchViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewProtocol.swift; sourceTree = "<group>"; };
+		FA23FE9025F1375700FCDFB3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		FA23FE9325F1381600FCDFB3 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		FA23FE9525F147CA00FCDFB3 /* Category.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Category.xcassets; sourceTree = "<group>"; };
+		FA23FE9725F16D4D00FCDFB3 /* Brands.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Brands.xcassets; sourceTree = "<group>"; };
+		FA23FE9925F19C4400FCDFB3 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		FCDC8DDDE7E8D88728760B15 /* Pods_FittingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FittingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,6 +184,8 @@
 				FA23FE4D25EEE86100FCDFB3 /* ofont.ru_Corbel.ttf */,
 				FA23FE4C25EEE86100FCDFB3 /* Questrial-Regular.otf */,
 				FA23FE4A25EEE86000FCDFB3 /* Roboto-Regular.ttf */,
+				FA23FE9525F147CA00FCDFB3 /* Category.xcassets */,
+				FA23FE9725F16D4D00FCDFB3 /* Brands.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -262,6 +280,7 @@
 				FA23FE8225EFEA7A00FCDFB3 /* MainAssembly.swift */,
 				FA23FE8025EFE96300FCDFB3 /* MainCoordinator.swift */,
 				FA23FE7125EFD99400FCDFB3 /* Discover */,
+				FA23FE8625F1355C00FCDFB3 /* Search */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -306,6 +325,51 @@
 			isa = PBXGroup;
 			children = (
 				FA23FE7E25EFDFDB00FCDFB3 /* DiscoverCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FA23FE8625F1355C00FCDFB3 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE8F25F1374500FCDFB3 /* ViewModel */,
+				FA23FE8B25F1366C00FCDFB3 /* Assembly */,
+				FA23FE8C25F1367700FCDFB3 /* View */,
+				FA23FE9225F137FC00FCDFB3 /* Coordinator */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		FA23FE8B25F1366C00FCDFB3 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE8725F1362C00FCDFB3 /* SearchAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		FA23FE8C25F1367700FCDFB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE8925F1364000FCDFB3 /* SearchViewController.swift */,
+				FA23FE8D25F1369300FCDFB3 /* SearchViewProtocol.swift */,
+				FA23FE9925F19C4400FCDFB3 /* ImageCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA23FE8F25F1374500FCDFB3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE9025F1375700FCDFB3 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA23FE9225F137FC00FCDFB3 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE9325F1381600FCDFB3 /* SearchCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -378,6 +442,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA23FE9625F147CA00FCDFB3 /* Category.xcassets in Resources */,
+				FA23FE9825F16D4D00FCDFB3 /* Brands.xcassets in Resources */,
 				FA23FE3925EEB90500FCDFB3 /* LaunchScreen.storyboard in Resources */,
 				FA23FE3625EEB90500FCDFB3 /* Assets.xcassets in Resources */,
 			);
@@ -438,8 +504,11 @@
 				FA23FE7725EFDA7500FCDFB3 /* DiscoverViewModel.swift in Sources */,
 				FA23FE4925EEE70500FCDFB3 /* Fonts.swift in Sources */,
 				FA23FE8125EFE96300FCDFB3 /* MainCoordinator.swift in Sources */,
+				FA23FE9A25F19C4400FCDFB3 /* ImageCollectionViewCell.swift in Sources */,
+				FA23FE9425F1381600FCDFB3 /* SearchCoordinator.swift in Sources */,
 				FA23FE7C25EFDD5C00FCDFB3 /* DiscoverViewProtocol.swift in Sources */,
 				FA23FE7F25EFDFDB00FCDFB3 /* DiscoverCoordinator.swift in Sources */,
+				FA23FE8A25F1364000FCDFB3 /* SearchViewController.swift in Sources */,
 				FA23FE6D25EFCB1000FCDFB3 /* LoggedOutViewModel.swift in Sources */,
 				FA23FE8525EFEC2100FCDFB3 /* ModulesAssembly.swift in Sources */,
 				FA23FE7A25EFDB3100FCDFB3 /* DiscoverAssembly.swift in Sources */,
@@ -448,9 +517,12 @@
 				FA23FE6A25EF08D000FCDFB3 /* LoginViewModel.swift in Sources */,
 				FA23FE5C25EEFFB100FCDFB3 /* LoggedOutViewProtocol.swift in Sources */,
 				FA23FE6F25EFCE5C00FCDFB3 /* NavigationController.swift in Sources */,
+				FA23FE8825F1362C00FCDFB3 /* SearchAssembly.swift in Sources */,
 				FA23FE2D25EEB90200FCDFB3 /* AppDelegate.swift in Sources */,
 				FA23FE7525EFD9FF00FCDFB3 /* DiscoverViewController.swift in Sources */,
+				FA23FE8E25F1369300FCDFB3 /* SearchViewProtocol.swift in Sources */,
 				FA23FE6625EF025300FCDFB3 /* LoginAssembly.swift in Sources */,
+				FA23FE9125F1375700FCDFB3 /* SearchViewModel.swift in Sources */,
 				FA23FE5325EEE98F00FCDFB3 /* Coordinator.swift in Sources */,
 				FA23FE4825EEE70500FCDFB3 /* Images.swift in Sources */,
 				FA23FE4325EEE60400FCDFB3 /* LoggedOutViewController.swift in Sources */,
