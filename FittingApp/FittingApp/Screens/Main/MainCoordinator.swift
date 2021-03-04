@@ -1,5 +1,5 @@
 //
-//  LoginCoordinator.swift
+//  MainCoordinator.swift
 //  FittingApp
 //
 //  Created by Kirill Khudiakov on 03.03.2021.
@@ -9,11 +9,11 @@ import UIKit
 import Swinject
 
 
-protocol LoginFlow {
-    func openDiscover()
+protocol MainViewProtocol where Self: UITabBarController {
+    
 }
 
-class LoginCoordinator: NavigationCoordinator {
+class MainCoordinator: NavigationCoordinator {
     
     var navigationController: UINavigationController
     var container: Container
@@ -24,17 +24,13 @@ class LoginCoordinator: NavigationCoordinator {
     }
     
     func start() {
-        let controller = container.resolve(LoginViewProtocol.self)!
-        let viewModel = LoginViewModel()
-        viewModel.coordinator = self
-        controller.viewModel = viewModel
+        let controller = container.resolve(MainViewProtocol.self)!
+        
+        let discover = DiscoverCoordinator(navigationController: navigationController, container: container).resolveController()
+        discover.tabBarItem = UITabBarItem(title: nil, image: UIImage.eyeImg, tag: 1)
+        controller.viewControllers = [discover]
+        
         
         navigationController.pushViewController(controller, animated: true)
-    }
-}
-
-extension LoginCoordinator: LoginFlow {
-    func openDiscover() {
-        MainCoordinator(navigationController: navigationController, container: container).start()
     }
 }

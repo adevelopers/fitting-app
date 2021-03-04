@@ -26,6 +26,14 @@
 		FA23FE6A25EF08D000FCDFB3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE6925EF08D000FCDFB3 /* LoginViewModel.swift */; };
 		FA23FE6D25EFCB1000FCDFB3 /* LoggedOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE6C25EFCB1000FCDFB3 /* LoggedOutViewModel.swift */; };
 		FA23FE6F25EFCE5C00FCDFB3 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE6E25EFCE5C00FCDFB3 /* NavigationController.swift */; };
+		FA23FE7525EFD9FF00FCDFB3 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE7425EFD9FF00FCDFB3 /* DiscoverViewController.swift */; };
+		FA23FE7725EFDA7500FCDFB3 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE7625EFDA7500FCDFB3 /* DiscoverViewModel.swift */; };
+		FA23FE7A25EFDB3100FCDFB3 /* DiscoverAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE7925EFDB3100FCDFB3 /* DiscoverAssembly.swift */; };
+		FA23FE7C25EFDD5C00FCDFB3 /* DiscoverViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE7B25EFDD5C00FCDFB3 /* DiscoverViewProtocol.swift */; };
+		FA23FE7F25EFDFDB00FCDFB3 /* DiscoverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE7E25EFDFDB00FCDFB3 /* DiscoverCoordinator.swift */; };
+		FA23FE8125EFE96300FCDFB3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE8025EFE96300FCDFB3 /* MainCoordinator.swift */; };
+		FA23FE8325EFEA7A00FCDFB3 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE8225EFEA7A00FCDFB3 /* MainAssembly.swift */; };
+		FA23FE8525EFEC2100FCDFB3 /* ModulesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE8425EFEC2100FCDFB3 /* ModulesAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +63,14 @@
 		FA23FE6925EF08D000FCDFB3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FA23FE6C25EFCB1000FCDFB3 /* LoggedOutViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggedOutViewModel.swift; path = FittingApp/Screens/Login/ViewModel/LoggedOutViewModel.swift; sourceTree = SOURCE_ROOT; };
 		FA23FE6E25EFCE5C00FCDFB3 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		FA23FE7425EFD9FF00FCDFB3 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		FA23FE7625EFDA7500FCDFB3 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
+		FA23FE7925EFDB3100FCDFB3 /* DiscoverAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverAssembly.swift; sourceTree = "<group>"; };
+		FA23FE7B25EFDD5C00FCDFB3 /* DiscoverViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewProtocol.swift; sourceTree = "<group>"; };
+		FA23FE7E25EFDFDB00FCDFB3 /* DiscoverCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCoordinator.swift; sourceTree = "<group>"; };
+		FA23FE8025EFE96300FCDFB3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FA23FE8225EFEA7A00FCDFB3 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		FA23FE8425EFEC2100FCDFB3 /* ModulesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesAssembly.swift; sourceTree = "<group>"; };
 		FCDC8DDDE7E8D88728760B15 /* Pods_FittingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FittingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,6 +141,7 @@
 		FA23FE4125EEE59600FCDFB3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FA23FE7025EFD98500FCDFB3 /* Main */,
 				FA23FE5D25EF012C00FCDFB3 /* Login */,
 				FA23FE4025EEE58900FCDFB3 /* Logout */,
 			);
@@ -139,6 +156,7 @@
 				FA23FE5225EEE98F00FCDFB3 /* Coordinator.swift */,
 				FA23FE5425EEE9FD00FCDFB3 /* AppCoordinator.swift */,
 				FA23FE6E25EFCE5C00FCDFB3 /* NavigationController.swift */,
+				FA23FE8425EFEC2100FCDFB3 /* ModulesAssembly.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -197,9 +215,9 @@
 		FA23FE5D25EF012C00FCDFB3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				FA23FE6125EF01CD00FCDFB3 /* Assembly */,
 				FA23FE6B25EFC63300FCDFB3 /* ViewModel */,
 				FA23FE6225EF01D600FCDFB3 /* Coordinator */,
-				FA23FE6125EF01CD00FCDFB3 /* Assembly */,
 				FA23FE6025EF019000FCDFB3 /* Views */,
 			);
 			path = Login;
@@ -236,6 +254,60 @@
 				FA23FE6925EF08D000FCDFB3 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA23FE7025EFD98500FCDFB3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE8225EFEA7A00FCDFB3 /* MainAssembly.swift */,
+				FA23FE8025EFE96300FCDFB3 /* MainCoordinator.swift */,
+				FA23FE7125EFD99400FCDFB3 /* Discover */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FA23FE7125EFD99400FCDFB3 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE7D25EFDFBD00FCDFB3 /* Coordinator */,
+				FA23FE7825EFDA7D00FCDFB3 /* Assembly */,
+				FA23FE7225EFD9B500FCDFB3 /* View */,
+				FA23FE7325EFD9C200FCDFB3 /* ViewModel */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		FA23FE7225EFD9B500FCDFB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE7425EFD9FF00FCDFB3 /* DiscoverViewController.swift */,
+				FA23FE7B25EFDD5C00FCDFB3 /* DiscoverViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA23FE7325EFD9C200FCDFB3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE7625EFDA7500FCDFB3 /* DiscoverViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA23FE7825EFDA7D00FCDFB3 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE7925EFDB3100FCDFB3 /* DiscoverAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		FA23FE7D25EFDFBD00FCDFB3 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FE7E25EFDFDB00FCDFB3 /* DiscoverCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		FD46307F414BE62E1B9C9AE0 /* Pods */ = {
@@ -363,19 +435,27 @@
 				FA23FE5F25EF015700FCDFB3 /* LoginViewProtocol.swift in Sources */,
 				FA23FE5825EEEF1E00FCDFB3 /* LoggedOutAssembly.swift in Sources */,
 				FA23FE5525EEE9FD00FCDFB3 /* AppCoordinator.swift in Sources */,
+				FA23FE7725EFDA7500FCDFB3 /* DiscoverViewModel.swift in Sources */,
 				FA23FE4925EEE70500FCDFB3 /* Fonts.swift in Sources */,
+				FA23FE8125EFE96300FCDFB3 /* MainCoordinator.swift in Sources */,
+				FA23FE7C25EFDD5C00FCDFB3 /* DiscoverViewProtocol.swift in Sources */,
+				FA23FE7F25EFDFDB00FCDFB3 /* DiscoverCoordinator.swift in Sources */,
 				FA23FE6D25EFCB1000FCDFB3 /* LoggedOutViewModel.swift in Sources */,
+				FA23FE8525EFEC2100FCDFB3 /* ModulesAssembly.swift in Sources */,
+				FA23FE7A25EFDB3100FCDFB3 /* DiscoverAssembly.swift in Sources */,
 				FA23FE6825EF059900FCDFB3 /* LoginCoordinator.swift in Sources */,
 				FA23FE5A25EEEFB400FCDFB3 /* LoggedOutCoordinator.swift in Sources */,
 				FA23FE6A25EF08D000FCDFB3 /* LoginViewModel.swift in Sources */,
 				FA23FE5C25EEFFB100FCDFB3 /* LoggedOutViewProtocol.swift in Sources */,
 				FA23FE6F25EFCE5C00FCDFB3 /* NavigationController.swift in Sources */,
 				FA23FE2D25EEB90200FCDFB3 /* AppDelegate.swift in Sources */,
+				FA23FE7525EFD9FF00FCDFB3 /* DiscoverViewController.swift in Sources */,
 				FA23FE6625EF025300FCDFB3 /* LoginAssembly.swift in Sources */,
 				FA23FE5325EEE98F00FCDFB3 /* Coordinator.swift in Sources */,
 				FA23FE4825EEE70500FCDFB3 /* Images.swift in Sources */,
 				FA23FE4325EEE60400FCDFB3 /* LoggedOutViewController.swift in Sources */,
 				FA23FE6425EF01F700FCDFB3 /* LoginViewController.swift in Sources */,
+				FA23FE8325EFEA7A00FCDFB3 /* MainAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
