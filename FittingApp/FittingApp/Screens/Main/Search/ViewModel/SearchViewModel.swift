@@ -11,6 +11,9 @@ import UIKit
 protocol SearchViewModelInput {
     func didTapCategoryButton()
     func didTapBrandButton()
+    func didSelectCategory(index: Int)
+    func didSelectBrand(index: Int)
+    func didSelectProduct(index: Int)
     
     func viewDidLoad()
 }
@@ -57,26 +60,49 @@ class SearchViewModel {
             .init(title: "Пальто", imageLink: "coat_cat"),
             .init(title: "Юбки", imageLink: "skirt_cat")
         ]
+        
+        productsItems = [
+            .init(title: "Юбка 1", imageLink: "skirt1"),
+            .init(title: "Юбка 2", imageLink: "skirt2"),
+            .init(title: "Юбка 3", imageLink: "skirt3")
+        ]
     }
     
     private func mapBrandViewItem(_ item: BrandModel) -> BrandViewItem {
         BrandViewItem(image: UIImage(imageLiteralResourceName: item.imageLink))
     }
     
+    private func mapCategoryViewItem(_ item: CategoryModel) -> CategoryViewItem {
+        CategoryViewItem(text: item.title, image: UIImage(imageLiteralResourceName: item.imageLink))
+    }
+    
+    private func mapProductViewItem(_ item: ProductModel) -> ProductViewItem {
+        ProductViewItem(text: item.title, image: UIImage(imageLiteralResourceName: item.imageLink))
+    }
+    
 }
 
 extension SearchViewModel: SearchViewModelInput {
-    func viewDidLoad() {
-        
-        
-        view?.applyState(state: .brands(items: brandsItems.map(mapBrandViewItem) ))
+    
+    func didSelectProduct(index: Int) {
+        print("Выбран товар \(productsItems[index].title)")
     }
     
     
+    func didSelectCategory(index: Int) {
+        view?.applyState(state: .product(items: productsItems.map(mapProductViewItem)))
+    }
     
+    func didSelectBrand(index: Int) {
+        view?.applyState(state: .product(items: productsItems.map(mapProductViewItem)))
+    }
+    
+    func viewDidLoad() {
+        view?.applyState(state: .brands(items: brandsItems.map(mapBrandViewItem) ))
+    }
     
     func didTapCategoryButton() {
-        
+        view?.applyState(state: .category(items: categoryItems.map(mapCategoryViewItem)))
     }
     
     func didTapBrandButton() {

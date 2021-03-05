@@ -8,7 +8,6 @@
 import UIKit
 import SnapKit
 
-
 import RxSwift
 import RxCocoa
 
@@ -28,7 +27,8 @@ struct ProductViewItem {
 }
 
 enum SearchViewState {
-    case search(items: [ProductViewItem])
+    case empty
+    case product(items: [ProductViewItem])
     case category(items: [CategoryViewItem])
     case brands(items: [BrandViewItem])
 }
@@ -39,20 +39,11 @@ class SearchViewController: UIViewController, SearchViewProtocol, UIScrollViewDe
     
     var viewModel: SearchViewModelInput?
     
-    private lazy var layout: UICollectionViewLayout = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: 107, height: 107)
-        layout.sectionInset = .init(top: 8, left: 0, bottom: 8, right: 0)
-        return layout
-    }()
+    private let categriesController = CategoriesViewController()
+    private let brandsController = BrandsViewController()
+    private let productsController = ProductsViewController()
     
-    private lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        collectionView.backgroundColor = .white
-        return collectionView
-    }()
+    private var state: SearchViewState = .empty
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel()
@@ -81,7 +72,7 @@ class SearchViewController: UIViewController, SearchViewProtocol, UIScrollViewDe
         view.layer.cornerRadius = 6
         view.setTitle("Категории", for: .normal)
         view.titleLabel?.font = .catalogButtonsFont(size: 18, weight: .regular)
-        view.setTitleColor( #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for: .normal)
+        view.setTitleColor( .buttontNormalTitle, for: .normal)
         view.addTarget(self,
                        action: #selector(didTapCategoriesButton),
                        for: .touchUpInside)
@@ -96,7 +87,7 @@ class SearchViewController: UIViewController, SearchViewProtocol, UIScrollViewDe
         view.layer.cornerRadius = 6
         view.setTitle("Бренды", for: .normal)
         view.titleLabel?.font = .catalogButtonsFont(size: 18, weight: .regular)
-        view.setTitleColor( #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for: .normal)
+        view.setTitleColor( .buttontNormalTitle, for: .normal)
         view.addTarget(self,
                        action: #selector(didTapBrandsButton),
                        for: .touchUpInside)
@@ -121,7 +112,13 @@ class SearchViewController: UIViewController, SearchViewProtocol, UIScrollViewDe
         view.addSubview(titleLabel)
         view.addSubview(searchTextField)
         view.addSubview(buttonsStack)
-        view.addSubview(collectionView)
+        
+        view.addSubview(categriesController.view)
+        view.addSubview(brandsController.view)
+        view.addSubview(productsController.view)
+        addChild(categriesController)
+        addChild(brandsController)
+        addChild(productsController)
         
         titleLabel.snp.makeConstraints {
             $0.left.equalToSuperview().offset(16)
@@ -141,10 +138,12 @@ class SearchViewController: UIViewController, SearchViewProtocol, UIScrollViewDe
             item.right.equalToSuperview().offset(-15)
         })
         
-        collectionView.snp.makeConstraints {
-            $0.top.equalTo(buttonsStack.snp.bottom)
-            $0.left.right.equalToSuperview().inset(16)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        [productsController.view, categriesController.view, brandsController.view].forEach { subview in
+            subview.snp.makeConstraints {
+                $0.top.equalTo(buttonsStack.snp.bottom).offset(16)
+                $0.left.right.equalToSuperview().inset(16)
+                $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            }
         }
         
         setupSubscriptions()
@@ -155,46 +154,75 @@ class SearchViewController: UIViewController, SearchViewProtocol, UIScrollViewDe
     @objc
     private func didTapCategoriesButton() {
         print("Кнопка - выбор Категории")
+        buttonsStack.arrangedSubviews.forEach {
+            $0.backgroundColor = .white
+            ($0 as? UIButton)?.setTitleColor(.buttontNormalTitle, for: .normal)
+        }
+        categoriesButton.backgroundColor = .black
+        categoriesButton.setTitleColor(.white, for: .normal)
         viewModel?.didTapCategoryButton()
     }
     
     @objc
     private func didTapBrandsButton() {
         print("Кнопка - выбор Бренды")
+        buttonsStack.arrangedSubviews.forEach {
+            $0.backgroundColor = .white
+            ($0 as? UIButton)?.setTitleColor(.buttontNormalTitle, for: .normal)
+        }
+        brandsButton.backgroundColor = .black
+        brandsButton.setTitleColor(.white, for: .normal)
         viewModel?.didTapBrandButton()
     }
     
-    private var brandItems = BehaviorRelay<[BrandViewItem]>.init(value: [])
-    
     private func setupSubscriptions() {
-        brandItems
-            .bind(to: collectionView.rx.items) { (c, i, e) in
-                let cell = c.dequeueReusableCell(withReuseIdentifier: "cell", for: IndexPath(row: i, section: 0))
-                (cell as? ImageCollectionViewCell)?.setup(image: e.image)
-                return cell
-            }
-            .disposed(by: disposeBag)
-        
-        collectionView.rx
-            .setDelegate(self)
-            .disposed(by: disposeBag)
+        brandsController.setCollectionDelegate(self)
+        categriesController.setCollectionDelegate(self)
+        productsController.setCollectionDelegate(self)
     }
 }
 
 extension SearchViewController: SearchViewOutput {
     func applyState(state: SearchViewState) {
-        
+        self.state = state
         switch state {
         case let .brands(items):
-            brandItems.accept(items)
-        default:
+            brandsController.brandItems.accept(items)
+            categriesController.view.isHidden = true
+            productsController.view.isHidden = true
+            
+            brandsController.view.isHidden = false
+        case let .category(items):
+            categriesController.categoryItems.accept(items)
+            brandsController.view.isHidden = true
+            productsController.view.isHidden = true
+            
+            categriesController.view.isHidden = false
+        case let .product(items):
+            productsController.productsItems.accept(items)
+            brandsController.view.isHidden = true
+            categriesController.view.isHidden = true
+            
+            productsController.view.isHidden = false
+        case .empty:
             ()
         }
-        
-        collectionView.reloadData()
     }
 }
 
 extension SearchViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch state {
+        case .brands:
+            viewModel?.didSelectBrand(index: indexPath.row)
+        case .category:
+            viewModel?.didSelectCategory(index: indexPath.row)
+        case .product:
+            viewModel?.didSelectProduct(index: indexPath.row)
+        default:
+            ()
+        }
+    }
     
 }

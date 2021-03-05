@@ -77,7 +77,7 @@ class LoggedOutViewController: UIViewController, LoggedOutViewProtocol {
         logoTitleView.snp.makeConstraints {
             $0.height.equalTo(200)
             $0.width.equalTo(200)
-            $0.center.equalToSuperview()
+            $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(-105)
         }
         
