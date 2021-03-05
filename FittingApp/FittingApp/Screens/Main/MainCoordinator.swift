@@ -28,8 +28,14 @@ class MainCoordinator: NavigationCoordinator {
         
         let discover = DiscoverCoordinator(navigationController: navigationController, container: container).resolveController()
         discover.tabBarItem = UITabBarItem(title: nil, image: UIImage.eyeImg, tag: 1)
-        controller.viewControllers = [discover]
         
+        let search = SearchCoordinator(navigationController: navigationController, container: container).resolveController()
+        search.tabBarItem = UITabBarItem(title: nil, image: .searchImg, tag: 2)
+        
+        controller.setViewControllers([
+            discover,
+            search
+        ], animated: false)
         
         navigationController.pushViewController(controller, animated: true)
     }

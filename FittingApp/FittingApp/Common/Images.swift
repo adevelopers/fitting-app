@@ -20,3 +20,4 @@ extension UIImage {
     static let bookmarkMakedImg = UIImage(imageLiteralResourceName: "bookmarkMaked")
     static let plusImg = UIImage(imageLiteralResourceName: "plus")
 }
+

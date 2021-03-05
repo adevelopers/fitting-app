@@ -31,10 +31,10 @@ class AppCoordinator: NavigationCoordinator {
     
     private func setupNavigationBar() {
         // back button icon
-        navigationController.navigationBar.backIndicatorImage = .arrowBackImg
-        navigationController.navigationBar.backIndicatorTransitionMaskImage = .arrowBackImg
-        navigationController.navigationBar.tintColor = .black
-        navigationController.navigationBar.barTintColor = .white
+        UINavigationBar.appearance().backIndicatorImage = .arrowBackImg
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = .arrowBackImg
+        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().barTintColor = .white
         
     }
     
