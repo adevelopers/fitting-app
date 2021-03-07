@@ -134,11 +134,12 @@ class SearchViewController: UIViewController, SearchViewProtocol, UIScrollViewDe
         buttonsStack.snp.makeConstraints({ item in
             item.top.equalTo(searchTextField.snp.bottom).offset(21)
             item.height.equalTo(50)
-            item.left.equalToSuperview().offset(15)
-            item.right.equalToSuperview().offset(-15)
+            item.left.right.equalToSuperview().inset(15)
         })
         
-        [productsController.view, categriesController.view, brandsController.view].forEach { subview in
+        [productsController.view,
+         categriesController.view,
+         brandsController.view].forEach { subview in
             subview.snp.makeConstraints {
                 $0.top.equalTo(buttonsStack.snp.bottom).offset(16)
                 $0.left.right.equalToSuperview().inset(16)

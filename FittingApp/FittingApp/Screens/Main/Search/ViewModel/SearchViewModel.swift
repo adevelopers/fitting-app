@@ -7,6 +7,13 @@
 
 import UIKit
 
+enum BodyLoocation {
+    case head
+    case top
+    case bottom
+    case bag
+    case shoes
+}
 
 protocol SearchViewModelInput {
     func didTapCategoryButton()
@@ -34,11 +41,13 @@ struct BrandModel {
 struct ProductModel {
     let title: String
     let imageLink: String
+    let bodyLocation: BodyLoocation
 }
 
 class SearchViewModel {
     var coordinator: SearchFlow?
     var view: SearchViewOutput?
+    var discover: DiscoverViewModelOutput?
     
     var categoryItems: [CategoryModel] = []
     var brandsItems: [BrandModel] = []
@@ -62,9 +71,9 @@ class SearchViewModel {
         ]
         
         productsItems = [
-            .init(title: "Юбка 1", imageLink: "skirt1"),
-            .init(title: "Юбка 2", imageLink: "skirt2"),
-            .init(title: "Юбка 3", imageLink: "skirt3")
+            .init(title: "Юбка 1", imageLink: "skirt_cat", bodyLocation: .bottom),
+            .init(title: "Юбка 2", imageLink: "skirt2", bodyLocation: .bottom),
+            .init(title: "Юбка 3", imageLink: "skirt3", bodyLocation: .bottom)
         ]
     }
     
@@ -85,9 +94,10 @@ class SearchViewModel {
 extension SearchViewModel: SearchViewModelInput {
     
     func didSelectProduct(index: Int) {
-        print("Выбран товар \(productsItems[index].title)")
+        let selectedProduct = productsItems[index]
+        print("Выбран товар \(selectedProduct.title)")
+        discover?.didSearchProduct(product: selectedProduct)
     }
-    
     
     func didSelectCategory(index: Int) {
         view?.applyState(state: .product(items: productsItems.map(mapProductViewItem)))

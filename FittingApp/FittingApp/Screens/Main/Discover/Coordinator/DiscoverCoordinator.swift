@@ -22,16 +22,11 @@ class DiscoverCoordinator: NavigationCoordinator {
         self.container = container
     }
     
-    func start() {
-        let controller = resolveController()
-        navigationController.pushViewController(controller, animated: true)
-    }
+    func start() {}
     
-    func resolveController() -> UIViewController {
-        let controller = container.resolve(DiscoverViewProtocol.self)!
-        let viewModel = DiscoverViewModel()
+    func resolveController(viewModel: DiscoverViewModel) -> UIViewController {
+        let controller = container.resolve(DiscoverViewProtocol.self, argument: viewModel)!
         viewModel.coordinator = self
-        controller.viewModel = viewModel
         return controller
     }
     
