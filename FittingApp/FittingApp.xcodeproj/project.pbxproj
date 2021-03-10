@@ -48,6 +48,11 @@
 		FA23FEA425F2709A00FCDFB3 /* BrandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FEA325F2709A00FCDFB3 /* BrandsViewController.swift */; };
 		FA23FEA725F2794B00FCDFB3 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FEA625F2794B00FCDFB3 /* ProductsViewController.swift */; };
 		FA23FEAB25F282B500FCDFB3 /* DemoProducts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA23FEAA25F282B500FCDFB3 /* DemoProducts.xcassets */; };
+		FA79B94A25F91D0600323E20 /* user_auth.json in Resources */ = {isa = PBXBuildFile; fileRef = FA79B94825F91D0600323E20 /* user_auth.json */; };
+		FA79B94B25F91D0600323E20 /* user_registration.json in Resources */ = {isa = PBXBuildFile; fileRef = FA79B94925F91D0600323E20 /* user_registration.json */; };
+		FA79B95125F9526B00323E20 /* auth_response_ok.json in Resources */ = {isa = PBXBuildFile; fileRef = FA79B95025F9526B00323E20 /* auth_response_ok.json */; };
+		FA79B95625F9537400323E20 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79B95525F9537400323E20 /* LoginService.swift */; };
+		FA79B95A25F954C600323E20 /* auth_response_fail.json in Resources */ = {isa = PBXBuildFile; fileRef = FA79B95925F954C600323E20 /* auth_response_fail.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +104,11 @@
 		FA23FEA325F2709A00FCDFB3 /* BrandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsViewController.swift; sourceTree = "<group>"; };
 		FA23FEA625F2794B00FCDFB3 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		FA23FEAA25F282B500FCDFB3 /* DemoProducts.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DemoProducts.xcassets; sourceTree = "<group>"; };
+		FA79B94825F91D0600323E20 /* user_auth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_auth.json; sourceTree = "<group>"; };
+		FA79B94925F91D0600323E20 /* user_registration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_registration.json; sourceTree = "<group>"; };
+		FA79B95025F9526B00323E20 /* auth_response_ok.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = auth_response_ok.json; sourceTree = "<group>"; };
+		FA79B95525F9537400323E20 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		FA79B95925F954C600323E20 /* auth_response_fail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = auth_response_fail.json; sourceTree = "<group>"; };
 		FCDC8DDDE7E8D88728760B15 /* Pods_FittingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FittingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -179,6 +189,7 @@
 		FA23FE4425EEE67600FCDFB3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FA79B94625F9189000323E20 /* JSON */,
 				FA23FE4725EEE70500FCDFB3 /* Fonts.swift */,
 				FA23FE4625EEE70500FCDFB3 /* Images.swift */,
 				FA23FE5225EEE98F00FCDFB3 /* Coordinator.swift */,
@@ -247,6 +258,7 @@
 		FA23FE5D25EF012C00FCDFB3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				FA79B95425F9534800323E20 /* Service */,
 				FA23FE6125EF01CD00FCDFB3 /* Assembly */,
 				FA23FE6B25EFC63300FCDFB3 /* ViewModel */,
 				FA23FE6225EF01D600FCDFB3 /* Coordinator */,
@@ -416,6 +428,49 @@
 			path = Products;
 			sourceTree = "<group>";
 		};
+		FA79B94625F9189000323E20 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				FA79B94D25F951E900323E20 /* User */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		FA79B94D25F951E900323E20 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				FA79B94F25F9523900323E20 /* Response */,
+				FA79B94E25F951F500323E20 /* Request */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		FA79B94E25F951F500323E20 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				FA79B94825F91D0600323E20 /* user_auth.json */,
+				FA79B94925F91D0600323E20 /* user_registration.json */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		FA79B94F25F9523900323E20 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FA79B95025F9526B00323E20 /* auth_response_ok.json */,
+				FA79B95925F954C600323E20 /* auth_response_fail.json */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		FA79B95425F9534800323E20 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA79B95525F9537400323E20 /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		FD46307F414BE62E1B9C9AE0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,9 +540,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA23FE9625F147CA00FCDFB3 /* Category.xcassets in Resources */,
+				FA79B94B25F91D0600323E20 /* user_registration.json in Resources */,
+				FA79B95125F9526B00323E20 /* auth_response_ok.json in Resources */,
+				FA79B95A25F954C600323E20 /* auth_response_fail.json in Resources */,
 				FA23FE9825F16D4D00FCDFB3 /* Brands.xcassets in Resources */,
 				FA23FEAB25F282B500FCDFB3 /* DemoProducts.xcassets in Resources */,
 				FA23FE3925EEB90500FCDFB3 /* LaunchScreen.storyboard in Resources */,
+				FA79B94A25F91D0600323E20 /* user_auth.json in Resources */,
 				FA23FE3625EEB90500FCDFB3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,6 +631,7 @@
 				FA23FE5325EEE98F00FCDFB3 /* Coordinator.swift in Sources */,
 				FA23FE4825EEE70500FCDFB3 /* Images.swift in Sources */,
 				FA23FE4325EEE60400FCDFB3 /* LoggedOutViewController.swift in Sources */,
+				FA79B95625F9537400323E20 /* LoginService.swift in Sources */,
 				FA23FE6425EF01F700FCDFB3 /* LoginViewController.swift in Sources */,
 				FA23FE9C25F254E300FCDFB3 /* TitleCollectionViewCell.swift in Sources */,
 				FA23FE9F25F2590C00FCDFB3 /* CategoriesViewController.swift in Sources */,

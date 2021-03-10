@@ -10,8 +10,11 @@ import Swinject
 
 struct LoginAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(LoginViewProtocol.self) { resolver in
-            return LoginViewController()
+        container.register(LoginViewProtocol.self) { (resolver, viewModel: LoginViewModel) in
+            let controller = LoginViewController()
+            controller.viewModel = viewModel
+            viewModel.view = controller
+            return controller
         }
     }
 }
