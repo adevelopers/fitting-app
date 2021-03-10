@@ -7,10 +7,20 @@
 
 import UIKit
 
+enum BodyLoocation {
+    case head
+    case top
+    case bottom
+    case bag
+    case shoes
+}
 
 protocol SearchViewModelInput {
     func didTapCategoryButton()
     func didTapBrandButton()
+    func didSelectCategory(index: Int)
+    func didSelectBrand(index: Int)
+    func didSelectProduct(index: Int)
     
     func viewDidLoad()
 }
@@ -31,11 +41,13 @@ struct BrandModel {
 struct ProductModel {
     let title: String
     let imageLink: String
+    let bodyLocation: BodyLoocation
 }
 
 class SearchViewModel {
     var coordinator: SearchFlow?
     var view: SearchViewOutput?
+    var discover: DiscoverViewModelOutput?
     
     var categoryItems: [CategoryModel] = []
     var brandsItems: [BrandModel] = []
@@ -57,26 +69,50 @@ class SearchViewModel {
             .init(title: "Пальто", imageLink: "coat_cat"),
             .init(title: "Юбки", imageLink: "skirt_cat")
         ]
+        
+        productsItems = [
+            .init(title: "Юбка 1", imageLink: "skirt_cat", bodyLocation: .bottom),
+            .init(title: "Юбка 2", imageLink: "skirt2", bodyLocation: .bottom),
+            .init(title: "Юбка 3", imageLink: "skirt3", bodyLocation: .bottom)
+        ]
     }
     
     private func mapBrandViewItem(_ item: BrandModel) -> BrandViewItem {
         BrandViewItem(image: UIImage(imageLiteralResourceName: item.imageLink))
     }
     
+    private func mapCategoryViewItem(_ item: CategoryModel) -> CategoryViewItem {
+        CategoryViewItem(text: item.title, image: UIImage(imageLiteralResourceName: item.imageLink))
+    }
+    
+    private func mapProductViewItem(_ item: ProductModel) -> ProductViewItem {
+        ProductViewItem(text: item.title, image: UIImage(imageLiteralResourceName: item.imageLink))
+    }
+    
 }
 
 extension SearchViewModel: SearchViewModelInput {
+    
+    func didSelectProduct(index: Int) {
+        let selectedProduct = productsItems[index]
+        print("Выбран товар \(selectedProduct.title)")
+        discover?.didSearchProduct(product: selectedProduct)
+    }
+    
+    func didSelectCategory(index: Int) {
+        view?.applyState(state: .product(items: productsItems.map(mapProductViewItem)))
+    }
+    
+    func didSelectBrand(index: Int) {
+        view?.applyState(state: .product(items: productsItems.map(mapProductViewItem)))
+    }
+    
     func viewDidLoad() {
-        
-        
         view?.applyState(state: .brands(items: brandsItems.map(mapBrandViewItem) ))
     }
     
-    
-    
-    
     func didTapCategoryButton() {
-        
+        view?.applyState(state: .category(items: categoryItems.map(mapCategoryViewItem)))
     }
     
     func didTapBrandButton() {
