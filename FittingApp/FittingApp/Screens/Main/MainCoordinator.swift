@@ -25,11 +25,16 @@ class MainCoordinator: NavigationCoordinator {
     
     func start() {
         let controller = container.resolve(MainViewProtocol.self)!
+        let discoverViewModel = DiscoverViewModel()
+        let discover = DiscoverCoordinator(navigationController: navigationController, container: container)
+            .resolveController(viewModel: discoverViewModel)
+        discover.tabBarItem = UITabBarItem(title: nil, image: .eyeImg, tag: 1)
         
-        let discover = DiscoverCoordinator(navigationController: navigationController, container: container).resolveController()
-        discover.tabBarItem = UITabBarItem(title: nil, image: UIImage.eyeImg, tag: 1)
         
-        let search = SearchCoordinator(navigationController: navigationController, container: container).resolveController()
+        let searchViewModel = SearchViewModel()
+        searchViewModel.discover = discoverViewModel
+        let search = SearchCoordinator(navigationController: navigationController, container: container)
+            .resolveController(viewModel: searchViewModel)
         search.tabBarItem = UITabBarItem(title: nil, image: .searchImg, tag: 2)
         
         controller.setViewControllers([

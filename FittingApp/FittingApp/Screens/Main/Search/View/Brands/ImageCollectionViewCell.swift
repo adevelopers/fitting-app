@@ -10,6 +10,10 @@ import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
     
+    static let reuseId: String = {
+        String(describing: self)
+    }()
+    
     private var imageView: UIImageView = {
        UIImageView()
     }()
