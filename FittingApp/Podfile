@@ -4,9 +4,10 @@ target 'FittingApp' do
   use_frameworks!
 
   # Pods for FittingApp
-  pod 'SnapKit'
-  pod 'Swinject'
-  pod 'RxSwift'
-  pod 'RxCocoa'
-
+  pod 'SnapKit', '~> 5.0.1'
+  pod 'Swinject', '~> 2.7.1'
+  pod 'RxSwift', '~> 6.1.0'
+  pod 'RxCocoa', '~> 6.1.0'
+  pod 'Alamofire', '~> 5.4.1'
+  
 end
