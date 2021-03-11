@@ -103,6 +103,18 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         
     @objc
     private func didTapLogInButton() {
-        viewModel?.didTapSignInButton()
+        viewModel?.didTapSignInButton(model: .init(login: loginTextField.text ?? "",
+                                                   password: passwordTextField.text ?? ""))
     }
+}
+
+extension LoginViewController: LoginViewInput {
+    func showError(msg: String) {
+        let alertController = UIAlertController(title: "Ошибка", message: msg, preferredStyle: .alert)
+        alertController.addAction(.init(title: "OK", style: .cancel))
+        
+        present(alertController, animated: true)
+    }
+    
+    
 }
