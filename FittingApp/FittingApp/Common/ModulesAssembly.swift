@@ -14,6 +14,7 @@ struct ModulesAssembly: Assembly {
         let modules: [Assembly] = [
             LoggedOutAssembly(),
             LoginAssembly(),
+            RegisterAssembly(),
             DiscoverAssembly(),
             MainAssembly(),
             SearchAssembly()
