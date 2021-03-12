@@ -12,6 +12,7 @@ protocol AbstractRequestFactory {
     var errorParser: AbstractErrorParser { get }
     var sessionManager: Session { get }
     var queue: DispatchQueue { get }
+    var baseUrl: URL { get }
     
     @discardableResult
     func request<T: Decodable>(

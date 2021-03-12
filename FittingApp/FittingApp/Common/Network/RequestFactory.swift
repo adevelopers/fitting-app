@@ -25,15 +25,15 @@ class RequestFactory {
     
     let sessionQueue = DispatchQueue.global(qos: .utility)
     
-    func makeUserRequestFactory() -> UserRequestFactory {
+    func makeLoginRequestFactory() -> LoginRequestFactory {
         let container = Container()
         
         container.register(AbstractErrorParser.self) { _ in ErrorParser() }
-        container.register(UserRequest.self) { resolver in
-            UserRequest(errorParser: resolver.resolve(AbstractErrorParser.self)!, sessionManager: self.commonSession)
+        container.register(LoginRequest.self) { resolver in
+            LoginRequest(errorParser: resolver.resolve(AbstractErrorParser.self)!, sessionManager: self.commonSession)
         }
         
-        return container.resolve(UserRequest.self)!
+        return container.resolve(LoginRequest.self)!
     }
     
 }
