@@ -40,6 +40,6 @@ extension LoggedOutCoordinator: LoggedOutFlow {
     }
     
     func registration() {
-        
+        RegisterCoordinator(navigationController: navigationController, container: container).start()
     }
 }

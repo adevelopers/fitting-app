@@ -19,6 +19,12 @@
 		2AE86AA625FA454A0035186D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE86AA525FA454A0035186D /* User.swift */; };
 		2AE86AAA25FA458E0035186D /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE86AA925FA458E0035186D /* LoginResult.swift */; };
 		2AE86AAE25FA46740035186D /* RegisterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE86AAD25FA46740035186D /* RegisterResult.swift */; };
+		2AE86AD625FA6F670035186D /* RegisterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE86AD525FA6F670035186D /* RegisterAssembly.swift */; };
+		2AE86ADA25FA6FC00035186D /* RegisterViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE86AD925FA6FC00035186D /* RegisterViewProtocol.swift */; };
+		2AE86ADE25FA70530035186D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE86ADD25FA70530035186D /* RegisterViewModel.swift */; };
+		2AE86AE225FA72620035186D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE86AE125FA72620035186D /* RegisterViewController.swift */; };
+		2AE86AE625FA74980035186D /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE86AE525FA74980035186D /* RegisterCoordinator.swift */; };
+		2AE86AEA25FA75980035186D /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE86AE925FA75980035186D /* RegisterService.swift */; };
 		FA23FE2D25EEB90200FCDFB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE2C25EEB90200FCDFB3 /* AppDelegate.swift */; };
 		FA23FE3625EEB90500FCDFB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA23FE3525EEB90500FCDFB3 /* Assets.xcassets */; };
 		FA23FE3925EEB90500FCDFB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA23FE3725EEB90500FCDFB3 /* LaunchScreen.storyboard */; };
@@ -78,6 +84,12 @@
 		2AE86AA525FA454A0035186D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2AE86AA925FA458E0035186D /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		2AE86AAD25FA46740035186D /* RegisterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResult.swift; sourceTree = "<group>"; };
+		2AE86AD525FA6F670035186D /* RegisterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembly.swift; sourceTree = "<group>"; };
+		2AE86AD925FA6FC00035186D /* RegisterViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewProtocol.swift; sourceTree = "<group>"; };
+		2AE86ADD25FA70530035186D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		2AE86AE125FA72620035186D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2AE86AE525FA74980035186D /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		2AE86AE925FA75980035186D /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		D75A76190493ABD47C5D8D3D /* Pods-FittingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FittingApp.debug.xcconfig"; path = "Target Support Files/Pods-FittingApp/Pods-FittingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E7A0D88DD8259E371D96A444 /* Pods-FittingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FittingApp.release.xcconfig"; path = "Target Support Files/Pods-FittingApp/Pods-FittingApp.release.xcconfig"; sourceTree = "<group>"; };
 		FA23FE2925EEB90200FCDFB3 /* FittingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FittingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +199,59 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		2AE86AD325FA6EA00035186D /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				2AE86AE825FA75880035186D /* Service */,
+				2AE86AD425FA6F4E0035186D /* Assembly */,
+				2AE86ADC25FA703C0035186D /* ViewModel */,
+				2AE86AE425FA74850035186D /* Coordinator */,
+				2AE86AD825FA6FA50035186D /* Views */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		2AE86AD425FA6F4E0035186D /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				2AE86AD525FA6F670035186D /* RegisterAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		2AE86AD825FA6FA50035186D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2AE86AD925FA6FC00035186D /* RegisterViewProtocol.swift */,
+				2AE86AE125FA72620035186D /* RegisterViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2AE86ADC25FA703C0035186D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2AE86ADD25FA70530035186D /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2AE86AE425FA74850035186D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2AE86AE525FA74980035186D /* RegisterCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2AE86AE825FA75880035186D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2AE86AE925FA75980035186D /* RegisterService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		64C6CA9733A319B968BA9038 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +307,7 @@
 		FA23FE4125EEE59600FCDFB3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				2AE86AD325FA6EA00035186D /* Registration */,
 				FA23FE7025EFD98500FCDFB3 /* Main */,
 				FA23FE5D25EF012C00FCDFB3 /* Login */,
 				FA23FE4025EEE58900FCDFB3 /* Logout */,
@@ -666,6 +732,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA23FE5F25EF015700FCDFB3 /* LoginViewProtocol.swift in Sources */,
+				2AE86ADE25FA70530035186D /* RegisterViewModel.swift in Sources */,
 				2AE86A9525FA43400035186D /* ResponseCodable.swift in Sources */,
 				2AE86A9B25FA43880035186D /* RequestRouter.swift in Sources */,
 				FA23FEA125F26C4900FCDFB3 /* Colors.swift in Sources */,
@@ -683,16 +750,19 @@
 				FA23FE8A25F1364000FCDFB3 /* SearchViewController.swift in Sources */,
 				FA23FE6D25EFCB1000FCDFB3 /* LoggedOutViewModel.swift in Sources */,
 				2AE86AAE25FA46740035186D /* RegisterResult.swift in Sources */,
+				2AE86AEA25FA75980035186D /* RegisterService.swift in Sources */,
 				FA23FE8525EFEC2100FCDFB3 /* ModulesAssembly.swift in Sources */,
 				2AE86A9225FA431F0035186D /* ErrorParser.swift in Sources */,
 				FA23FE7A25EFDB3100FCDFB3 /* DiscoverAssembly.swift in Sources */,
 				FA23FE6825EF059900FCDFB3 /* LoginCoordinator.swift in Sources */,
+				2AE86AD625FA6F670035186D /* RegisterAssembly.swift in Sources */,
 				FA23FE5A25EEEFB400FCDFB3 /* LoggedOutCoordinator.swift in Sources */,
 				FA23FE6A25EF08D000FCDFB3 /* LoginViewModel.swift in Sources */,
 				2AE86AA625FA454A0035186D /* User.swift in Sources */,
 				FA23FEA425F2709A00FCDFB3 /* BrandsViewController.swift in Sources */,
 				2AE86AA125FA443D0035186D /* UserRequest.swift in Sources */,
 				FA23FE5C25EEFFB100FCDFB3 /* LoggedOutViewProtocol.swift in Sources */,
+				2AE86AE225FA72620035186D /* RegisterViewController.swift in Sources */,
 				FA23FE6F25EFCE5C00FCDFB3 /* NavigationController.swift in Sources */,
 				FA23FE8825F1362C00FCDFB3 /* SearchAssembly.swift in Sources */,
 				FA23FE2D25EEB90200FCDFB3 /* AppDelegate.swift in Sources */,
@@ -703,6 +773,7 @@
 				2AE86A9E25FA43D20035186D /* UserRequestFactory.swift in Sources */,
 				FA23FE6625EF025300FCDFB3 /* LoginAssembly.swift in Sources */,
 				FA23FE9125F1375700FCDFB3 /* SearchViewModel.swift in Sources */,
+				2AE86AE625FA74980035186D /* RegisterCoordinator.swift in Sources */,
 				FA23FE5325EEE98F00FCDFB3 /* Coordinator.swift in Sources */,
 				2AE86A9825FA43680035186D /* AbstractRequestFactory.swift in Sources */,
 				FA23FE4825EEE70500FCDFB3 /* Images.swift in Sources */,
@@ -711,6 +782,7 @@
 				FA23FE6425EF01F700FCDFB3 /* LoginViewController.swift in Sources */,
 				FA23FE9C25F254E300FCDFB3 /* TitleCollectionViewCell.swift in Sources */,
 				FA23FE9F25F2590C00FCDFB3 /* CategoriesViewController.swift in Sources */,
+				2AE86ADA25FA6FC00035186D /* RegisterViewProtocol.swift in Sources */,
 				FA23FE8325EFEA7A00FCDFB3 /* MainAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
