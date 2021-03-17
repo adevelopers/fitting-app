@@ -9,26 +9,18 @@ import Foundation
 
 
 protocol LoginViewModelInput {
-    func didTapSignInButton(model: Login.RequestModel)
+    func didTapSignInButton(model: Login.Request)
 }
 
 class LoginViewModel {
     var coordinator: LoginFlow?
     var view: LoginViewInput?
-    
-    private let service: LoginServiceProtocol
-    private let userRequestFactory = RequestFactory().makeUserRequestFactory()
-    
-    init(service: LoginServiceProtocol) {
-        self.service = service
-    }
-    
-    // Output View
+    private let userRequestFactory = RequestFactory().makeLoginRequestFactory()
 }
 
 extension LoginViewModel: LoginViewModelInput {
     // Input
-    func didTapSignInButton(model: Login.RequestModel) {
+    func didTapSignInButton(model: Login.Request) {
         userRequestFactory.login(email: model.login, password: model.password) { [weak self] response in
             guard let self = self else { return }
             switch response.result {
@@ -49,19 +41,5 @@ extension LoginViewModel: LoginViewModelInput {
                 self.view?.showError(msg: "❌ Ошибка!")
             }
         }
-        /*
-        service.auth(model: model) { [weak self] result in
-            switch result {
-            case let .success(response):
-                print("auth token for save in session: ", response.token ?? "")
-                self?.coordinator?.openDiscover()
-            case let .failure(error):
-                //TODO: show error message
-                self?.view?.showError(msg: "❌ \(error)")
-            }
-        
-        }
-        */
     }
-    
 }
