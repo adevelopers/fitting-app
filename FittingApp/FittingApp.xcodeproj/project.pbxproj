@@ -170,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				FA23FE7025EFD98500FCDFB3 /* Main */,
+				FA23FE8625F1355C00FCDFB3 /* Search */,
 				FA23FE5D25EF012C00FCDFB3 /* Login */,
 				FA23FE4025EEE58900FCDFB3 /* Logout */,
 			);
@@ -294,7 +295,6 @@
 				FA23FE8225EFEA7A00FCDFB3 /* MainAssembly.swift */,
 				FA23FE8025EFE96300FCDFB3 /* MainCoordinator.swift */,
 				FA23FE7125EFD99400FCDFB3 /* Discover */,
-				FA23FE8625F1355C00FCDFB3 /* Search */,
 			);
 			path = Main;
 			sourceTree = "<group>";
