@@ -144,8 +144,7 @@ class RegisterViewController: UIViewController, RegisterViewProtocol {
         
     @objc
     private func didTapLogInButton() {
-        viewModel?.didTapSignInButton(model: .init(id: nil,
-                                                   login: loginTextField.text ?? "",
+        viewModel?.didTapSignInButton(model: .init(login: loginTextField.text ?? "",
                                                    password: passwordTextField.text ?? "",
                                                    firstName: firstNameTextField.text ?? "",
                                                    lastName: lastNameTextField.text ?? ""

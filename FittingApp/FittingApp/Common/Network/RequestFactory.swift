@@ -36,4 +36,14 @@ class RequestFactory {
         return container.resolve(LoginRequest.self)!
     }
     
+    func makeRegisterRequestFactory() -> RegisterRequestFactory {
+        let container = Container()
+        
+        container.register(AbstractErrorParser.self) { _ in ErrorParser() }
+        container.register(RegisterRequest.self) { resolver in
+            RegisterRequest(errorParser: resolver.resolve(AbstractErrorParser.self)!, sessionManager: self.commonSession)
+        }
+        
+        return container.resolve(RegisterRequest.self)!
+    }
 }

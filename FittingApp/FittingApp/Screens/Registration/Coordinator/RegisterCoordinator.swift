@@ -24,7 +24,7 @@ class RegisterCoordinator: NavigationCoordinator {
     }
     
     func start() {
-        let viewModel = RegisterViewModel(service: RegisterService())
+        let viewModel = RegisterViewModel()
         let controller = container.resolve(RegisterViewProtocol.self, argument: viewModel)!
         viewModel.coordinator = self
         navigationController.pushViewController(controller, animated: true)
