@@ -15,8 +15,8 @@ enum Login {
     }
     
     struct Response: Codable {
-        let message: String
-        let result: Int
+        let message: String?
+        let result: Int?
         let token: String?
     }
 }
