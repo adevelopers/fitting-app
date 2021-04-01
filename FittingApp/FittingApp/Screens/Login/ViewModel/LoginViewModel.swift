@@ -38,7 +38,9 @@ extension LoginViewModel: LoginViewModelInput {
             case .failure(_):
                 
                 print(response)
-                self.view?.showError(msg: "❌ Ошибка!")
+                DispatchQueue.main.async {
+                    self.view?.showError(msg: "❌ Ошибка!")
+                }
             }
         }
     }
