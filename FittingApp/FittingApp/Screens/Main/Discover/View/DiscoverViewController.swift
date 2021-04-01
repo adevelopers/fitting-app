@@ -10,6 +10,11 @@ import UIKit
 import SnapKit
 
 
+protocol DiscoverViewInput {
+    func setBottomImage(image: UIImage)
+}
+
+
 class DiscoverViewController: UIViewController, DiscoverViewProtocol {
     
     var viewModel: DiscoverViewModelInput?
@@ -94,6 +99,14 @@ class DiscoverViewController: UIViewController, DiscoverViewProtocol {
         return view
     }()
     
+    // примерочные картинки
+    private lazy var bottomImageView: UIImageView = {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFill
+        view.backgroundColor = .clear
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -158,6 +171,15 @@ class DiscoverViewController: UIViewController, DiscoverViewProtocol {
             $0.right.equalTo(mannequinBackgroundImg.snp.right).offset(-31)
             $0.bottom.equalTo(mannequinBackgroundImg.snp.bottom).offset(-16)
         }
+        
+        view.addSubview(bottomImageView)
+        bottomImageView.snp.makeConstraints {
+            $0.bottom.equalTo(mannequinBackgroundImg.snp.bottom).inset(100)
+            $0.width.equalTo(160)
+            $0.height.equalTo(260)
+            $0.centerX.equalTo(mannequinBackgroundImg.snp.centerX)
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -201,4 +223,11 @@ class DiscoverViewController: UIViewController, DiscoverViewProtocol {
     }
     
 
+}
+
+extension DiscoverViewController: DiscoverViewInput {
+    func setBottomImage(image: UIImage) {
+        bottomImageView.image = image
+    }
+    
 }

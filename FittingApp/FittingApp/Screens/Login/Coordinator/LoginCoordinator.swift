@@ -24,11 +24,9 @@ class LoginCoordinator: NavigationCoordinator {
     }
     
     func start() {
-        let controller = container.resolve(LoginViewProtocol.self)!
         let viewModel = LoginViewModel()
+        let controller = container.resolve(LoginViewProtocol.self, argument: viewModel)!
         viewModel.coordinator = self
-        controller.viewModel = viewModel
-        
         navigationController.pushViewController(controller, animated: true)
     }
 }
