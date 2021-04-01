@@ -21,13 +21,8 @@
 		2AE86AE225FA72620035186D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE86AE125FA72620035186D /* RegisterViewController.swift */; };
 		2AE86AE625FA74980035186D /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE86AE525FA74980035186D /* RegisterCoordinator.swift */; };
 		2AE86AEA25FA75980035186D /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE86AE925FA75980035186D /* RegisterService.swift */; };
-		2AF0A4F32615E7490066E448 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0A4E62615E6620066E448 /* LoginViewModel.swift */; };
-		2AF0A4F52615E77E0066E448 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0A4E82615E6620066E448 /* LoginCoordinator.swift */; };
-		2AF0A4F62615E7910066E448 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0A4EA2615E6620066E448 /* LoginAssembly.swift */; };
 		2AF0A4F72615E7910066E448 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0A4EC2615E6620066E448 /* LoginRequest.swift */; };
 		2AF0A4F82615E7910066E448 /* LoginRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0A4ED2615E6620066E448 /* LoginRequestFactory.swift */; };
-		2AF0A4F92615E7910066E448 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0A4EF2615E6620066E448 /* LoginViewController.swift */; };
-		2AF0A4FA2615E7910066E448 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0A4F02615E6620066E448 /* LoginViewProtocol.swift */; };
 		FA23FE2D25EEB90200FCDFB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23FE2C25EEB90200FCDFB3 /* AppDelegate.swift */; };
 		FA23FE3625EEB90500FCDFB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA23FE3525EEB90500FCDFB3 /* Assets.xcassets */; };
 		FA23FE3925EEB90500FCDFB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA23FE3725EEB90500FCDFB3 /* LaunchScreen.storyboard */; };
@@ -80,13 +75,13 @@
 		2AF0A4D12615E5540066E448 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		2AF0A4D22615E5540066E448 /* SearchViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewProtocol.swift; sourceTree = "<group>"; };
 		2AF0A4E52615E6620066E448 /* LoggedOutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewModel.swift; sourceTree = "<group>"; };
-		2AF0A4E62615E6620066E448 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		2AF0A4E82615E6620066E448 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		2AF0A4EA2615E6620066E448 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		2AF0A4EC2615E6620066E448 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		2AF0A4ED2615E6620066E448 /* LoginRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestFactory.swift; sourceTree = "<group>"; };
-		2AF0A4EF2615E6620066E448 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2AF0A4F02615E6620066E448 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
+		2AF0A5192615E93D0066E448 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2AF0A51B2615E93D0066E448 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		2AF0A51D2615E93D0066E448 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		2AF0A5222615E93D0066E448 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2AF0A5232615E93D0066E448 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		D75A76190493ABD47C5D8D3D /* Pods-FittingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FittingApp.debug.xcconfig"; path = "Target Support Files/Pods-FittingApp/Pods-FittingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E7A0D88DD8259E371D96A444 /* Pods-FittingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FittingApp.release.xcconfig"; path = "Target Support Files/Pods-FittingApp/Pods-FittingApp.release.xcconfig"; sourceTree = "<group>"; };
 		FA23FE2925EEB90200FCDFB3 /* FittingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FittingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,11 +288,11 @@
 		2AF0A4E32615E6620066E448 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2AF0A5212615E93D0066E448 /* Views */,
+				2AF0A51C2615E93D0066E448 /* Assembly */,
+				2AF0A51A2615E93D0066E448 /* Coordinator */,
 				2AF0A4E42615E6620066E448 /* ViewModel */,
-				2AF0A4E72615E6620066E448 /* Coordinator */,
-				2AF0A4E92615E6620066E448 /* Assembly */,
 				2AF0A4EB2615E6620066E448 /* Service */,
-				2AF0A4EE2615E6620066E448 /* Views */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -306,25 +301,9 @@
 			isa = PBXGroup;
 			children = (
 				2AF0A4E52615E6620066E448 /* LoggedOutViewModel.swift */,
-				2AF0A4E62615E6620066E448 /* LoginViewModel.swift */,
+				2AF0A5192615E93D0066E448 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		2AF0A4E72615E6620066E448 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				2AF0A4E82615E6620066E448 /* LoginCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		2AF0A4E92615E6620066E448 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				2AF0A4EA2615E6620066E448 /* LoginAssembly.swift */,
-			);
-			path = Assembly;
 			sourceTree = "<group>";
 		};
 		2AF0A4EB2615E6620066E448 /* Service */ = {
@@ -336,11 +315,27 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		2AF0A4EE2615E6620066E448 /* Views */ = {
+		2AF0A51A2615E93D0066E448 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				2AF0A4EF2615E6620066E448 /* LoginViewController.swift */,
-				2AF0A4F02615E6620066E448 /* LoginViewProtocol.swift */,
+				2AF0A51B2615E93D0066E448 /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2AF0A51C2615E93D0066E448 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				2AF0A51D2615E93D0066E448 /* LoginAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		2AF0A5212615E93D0066E448 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2AF0A5222615E93D0066E448 /* LoginViewController.swift */,
+				2AF0A5232615E93D0066E448 /* LoginViewProtocol.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -658,13 +653,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AF0A4F62615E7910066E448 /* LoginAssembly.swift in Sources */,
 				2AF0A4F72615E7910066E448 /* LoginRequest.swift in Sources */,
 				2AF0A4F82615E7910066E448 /* LoginRequestFactory.swift in Sources */,
-				2AF0A4F92615E7910066E448 /* LoginViewController.swift in Sources */,
-				2AF0A4FA2615E7910066E448 /* LoginViewProtocol.swift in Sources */,
-				2AF0A4F52615E77E0066E448 /* LoginCoordinator.swift in Sources */,
-				2AF0A4F32615E7490066E448 /* LoginViewModel.swift in Sources */,
 				2AE86ADE25FA70530035186D /* RegisterViewModel.swift in Sources */,
 				2AE86A9525FA43400035186D /* ResponseCodable.swift in Sources */,
 				2AE86A9B25FA43880035186D /* RequestRouter.swift in Sources */,
