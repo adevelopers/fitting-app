@@ -9,8 +9,6 @@ import UIKit
 import SnapKit
 
 
-
-
 class LoggedOutViewController: UIViewController, LoggedOutViewProtocol {
     
    var viewModel: LoggedOutViewModelInput?

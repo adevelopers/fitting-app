@@ -30,6 +30,8 @@ class RegisterViewController: UIViewController, RegisterViewProtocol {
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         view.layer.sublayerTransform = CATransform3DMakeTranslation(15, 0, 0)
         view.placeholder = "anna@example.ru"
+        view.autocorrectionType = .no
+        view.autocapitalizationType = .none
         return view
     }()
     
