@@ -9,27 +9,19 @@ import Foundation
 
 
 protocol RegisterViewModelInput {
-    func didTapSignInButton(model: User)
+    func didTapSignInButton(model: Register.Request)
 }
 
 class RegisterViewModel {
     var coordinator: RegisterFlow?
     var view: RegisterViewInput?
-    
-    private var userRequestFactory = RequestFactory().makeUserRequestFactory()
-    
-    private let service: RegisterServiceProtocol
-    
-    init(service: RegisterServiceProtocol) {
-        self.service = service
-    }
-
+    private var userRequestFactory = RequestFactory().makeRegisterRequestFactory()
 }
 
 extension RegisterViewModel: RegisterViewModelInput {
     // Input
-    func didTapSignInButton(model: User) {
-        userRequestFactory.register(user: model) { [weak self] response in
+    func didTapSignInButton(model: Register.Request) {
+        userRequestFactory.register(email: model.login, password: model.password, firstName: model.firstName, lastName: model.lastName) { [weak self] response in
             guard let self = self else { return }
             switch response.result {
             case .success(let response):

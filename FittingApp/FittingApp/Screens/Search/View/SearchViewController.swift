@@ -138,10 +138,6 @@ class SearchViewController: UIViewController, SearchViewProtocol, UIScrollViewDe
             item.right.equalToSuperview().offset(-15)
         })
         
-        [productsController.view, categriesController.view, brandsController.view].forEach { subview in
-            item.left.right.equalToSuperview().inset(15)
-        })
-        
         [productsController.view,
          categriesController.view,
          brandsController.view].forEach { subview in

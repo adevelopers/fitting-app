@@ -31,7 +31,7 @@ class SearchCoordinator: NavigationCoordinator {
         let viewModel = SearchViewModel()
         viewModel.coordinator = self
         let controller = container.resolve(SearchViewProtocol.self, argument: viewModel)!
-        
+        return controller
 //        let controller = resolveController()
 //        navigationController.pushViewController(controller, animated: true)
     }
