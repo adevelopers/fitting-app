@@ -71,6 +71,9 @@ class SearchViewModel {
         ]
         
         productsItems = [
+            .init(title: "Юбка 1", imageLink: "skirt1"),
+            .init(title: "Юбка 2", imageLink: "skirt2"),
+            .init(title: "Юбка 3", imageLink: "skirt3")
             .init(title: "Юбка 1", imageLink: "skirt_cat", bodyLocation: .bottom),
             .init(title: "Юбка 2", imageLink: "skirt2", bodyLocation: .bottom),
             .init(title: "Юбка 3", imageLink: "skirt3", bodyLocation: .bottom)
@@ -94,6 +97,9 @@ class SearchViewModel {
 extension SearchViewModel: SearchViewModelInput {
     
     func didSelectProduct(index: Int) {
+        print("Выбран товар \(productsItems[index].title)")
+    }
+    
         let selectedProduct = productsItems[index]
         print("Выбран товар \(selectedProduct.title)")
         discover?.didSearchProduct(product: selectedProduct)
